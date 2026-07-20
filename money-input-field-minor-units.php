@@ -16,7 +16,7 @@ Select::make('price_currency')
     ->required()
     ->columnSpan(1),
 
-// Original price, usually displayed as crossed out
+// Current price, displayed as actual price 
 TextInput::make('price_minor_units')
     ->label('Price')
     ->prefix(fn (Get $get): ?string => $get('price_currency')) // update with selected currency
